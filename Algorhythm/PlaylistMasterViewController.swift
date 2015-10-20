@@ -55,7 +55,7 @@ class PlaylistMasterViewController: UIViewController {
             //}
             
             let playlistImageView = sender!.view as! UIImageView
-            if let index = find(playlistArray, playlistImageView){
+            if let index = playlistArray.indexOf(playlistImageView){
                 let playlistDetailController = segue.destinationViewController as! PlaylistDetailViewController
                 playlistDetailController.playlist = Playlist(index: index)
             }
